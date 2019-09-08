@@ -17,9 +17,26 @@ from django.contrib import admin
 from django.urls import path
 
 from app import views
+from amazeui import views as amazeuiViews
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
     path('home/', views.home),
+    path('tablesPage/', views.tablesPage),
+    path('calendarPage/', views.calendarPage),
+    path('formPage/', views.formPage),
+    path('chartPage/', views.chartPage),
+    path('tableListPage/', views.tableListPage),
+    path('tableListImgPage/', views.tableListImgPage),
+    path('signUpPage/', views.signUpPage),
+    path('loginPage/', views.loginPage),
+    path('errorPage/', views.errorPage),
+
+    #
+    path('amazeui/', amazeuiViews.index),
 ]
+              # + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+

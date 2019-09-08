@@ -10,25 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="../static/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../static/assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <script src="https://cdn.bootcss.com/echarts/3.7.2/echarts.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.min.css" />
-    <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/resource/amazeui/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../static/assets/css/amazeui.datatables.min.css" />
+    <link rel="stylesheet" href="../static/assets/css/app.css">
+    <script src="../static/assets/js/jquery.min.js"></script>
 
 </head>
 
 <body data-type="widgets">
-    <script src="assets/js/theme.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;"><img src="assets/img/logo.png" alt=""></a>
+                <a href="javascript:;"><img src="../static/assets/img/logo.png" alt=""></a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
@@ -64,7 +63,7 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="assets/img/user04.png" alt="">
+                                            <img src="../static/assets/img/user04.png" alt="">
                                         </div>
                                         <div class="menu-messages-time">
                                             3小时前
@@ -83,7 +82,7 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="assets/img/user02.png" alt="">
+                                            <img src="../static/assets/img/user02.png" alt="">
                                         </div>
                                         <div class="menu-messages-time">
                                             5天前
@@ -189,7 +188,7 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="assets/img/user04.png" alt="">
+                        <img src="../static/assets/img/user04.png" alt="">
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
@@ -199,32 +198,33 @@
                 </div>
             </div>
 
+
             <!-- 菜单 -->
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>
                 <li class="sidebar-nav-link">
-                    <a href="index.html">
+                    <a href="/index">
                         <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="tables.html">
+                    <a href="/tablesPage">
                         <i class="am-icon-table sidebar-nav-link-logo"></i> 表格
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="calendar.html">
+                    <a href="/calendarPage">
                         <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日历
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="form.html">
+                    <a href="/formPage">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单
 
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="chart.html">
+                    <a href="/chartPage">
                         <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 图表
 
                     </a>
@@ -238,37 +238,38 @@
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
                         <li class="sidebar-nav-link">
-                            <a href="table-list.html" class="sub-active">
+                            <a href="/tableListPage">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 文字列表
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="table-list-img.html">
+                            <a href="/tableListImgPage" class="sub-active">
                                 <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 图文列表
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="sign-up.html">
+                    <a href="/signUpPage">
                         <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册
                         <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="login.html">
+                    <a href="/loginPage">
                         <i class="am-icon-key sidebar-nav-link-logo"></i> 登录
                     </a>
                 </li>
                 <li class="sidebar-nav-link">
-                    <a href="404.html">
+                    <a href="/errorPage">
                         <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误
                     </a>
                 </li>
 
             </ul>
         </div>
+
 
 
         <!-- 内容区域 -->
@@ -319,9 +320,10 @@
                                 </div>
 
                                 <div class="am-u-sm-12">
-                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
+                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
+                                                <th>文章缩略图</th>
                                                 <th>文章标题</th>
                                                 <th>作者</th>
                                                 <th>时间</th>
@@ -330,10 +332,13 @@
                                         </thead>
                                         <tbody>
                                             <tr class="gradeX">
-                                                <td>Amaze UI 模式窗口</td>
-                                                <td>张鹏飞</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">Amaze UI 模式窗口</td>
+                                                <td class="am-text-middle">张鹏飞</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -345,10 +350,13 @@
                                                 </td>
                                             </tr>
                                             <tr class="even gradeC">
-                                                <td>有适配微信小程序的计划吗</td>
-                                                <td>天纵之人</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">有适配微信小程序的计划吗</td>
+                                                <td class="am-text-middle">天纵之人</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -360,10 +368,13 @@
                                                 </td>
                                             </tr>
                                             <tr class="gradeX">
-                                                <td>请问有没有amazeui 分享插件</td>
-                                                <td>王宽师</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">请问有没有amazeui 分享插件</td>
+                                                <td class="am-text-middle">王宽师</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -375,10 +386,13 @@
                                                 </td>
                                             </tr>
                                             <tr class="even gradeC">
-                                                <td>关于input输入框的问题</td>
-                                                <td>着迷</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">关于input输入框的问题</td>
+                                                <td class="am-text-middle">着迷</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -390,10 +404,13 @@
                                                 </td>
                                             </tr>
                                             <tr class="even gradeC">
-                                                <td>有没有发现官网上的下载包不好用</td>
-                                                <td>醉里挑灯看键</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">有没有发现官网上的下载包不好用</td>
+                                                <td class="am-text-middle">醉里挑灯看键</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -406,10 +423,13 @@
                                             </tr>
 
                                             <tr class="even gradeC">
-                                                <td>我建议WEB版本文件引入问题</td>
-                                                <td>罢了</td>
-                                                <td>2016-09-26</td>
                                                 <td>
+                                                    <img src="../static/assets/img/k.jpg" class="tpl-table-line-img" alt="">
+                                                </td>
+                                                <td class="am-text-middle">我建议WEB版本文件引入问题</td>
+                                                <td class="am-text-middle">罢了</td>
+                                                <td class="am-text-middle">2016-09-26</td>
+                                                <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
                                                         <a href="javascript:;">
                                                             <i class="am-icon-pencil"></i> 编辑
@@ -446,10 +466,8 @@
         </div>
     </div>
     </div>
-    <script src="assets/js/amazeui.min.js"></script>
-    <script src="assets/js/amazeui.datatables.min.js"></script>
-    <script src="assets/js/dataTables.responsive.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../static/assets/js/amazeui.min.js"></script>
+    <script src="../static/assets/js/app.js"></script>
 
 </body>
 
