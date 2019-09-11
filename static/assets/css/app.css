@@ -210,7 +210,7 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
   width: 130px;
   padding: 15px;
   border-radius: 4px 0 0 4px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .fc-content .am-icon-close {
   position: absolute;

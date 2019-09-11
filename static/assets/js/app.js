@@ -299,6 +299,33 @@ function autoLeftNav() {
     }
 }
 
+/*省份选择*/
+var provinceSelectBind = function () {
+    //配置插件目录
+    layui.config({
+        base: '../static/resource/layui2.5.4/mods/'
+        , version: '1.0'
+    });
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'layarea'], function () {
+        var layer = layui.layer
+            , form = layui.form
+            , layarea = layui.layarea;
+
+        layarea.render({
+            elem: '#area-picker',
+            change: function (res) {
+                //选择结果
+                console.log(res);
+                res.province
+                $("div.page-header-heading").html('<span class="am-icon-home page-header-heading-icon"></span> ' +
+                    res.province
+                )
+            }
+        });
+    });
+}
+
 
 $(document).ready(function () {
     /*加载 3个 公共页面*/
@@ -318,6 +345,8 @@ $(document).ready(function () {
             storageSave(saveSelectColor);
 
         })
+        /* 省份选择功能*/
+        provinceSelectBind();
     });
     <!-- 3 侧边导航栏 -->
     $(".left-sidebar").load("../static/common/html/sidebar.html", function () {
