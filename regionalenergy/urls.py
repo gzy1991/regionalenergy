@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
     path('home/', views.home),
+    path('regionLink/', views.regionLink),
+
     path('tablesPage/', views.tablesPage),
     path('calendarPage/', views.calendarPage),
     path('formPage/', views.formPage),

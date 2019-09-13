@@ -10,6 +10,9 @@ def index(request):
 def home(request):
     return  render(request, 'app/homePage.html')
 
+def regionLink(request):
+    return  render(request, 'app/regionLink.html')
+
 def tablesPage(request):
     return  render(request, 'app/tables.html')
 

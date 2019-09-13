@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
-    <meta name="description" content="这是一个 index 页面">
+    <title>区域联动</title>
+    <meta name="description" content="这是 区域联动 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
@@ -14,20 +14,20 @@
     <link rel="apple-touch-icon-precomposed" href="../static/assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <script src="../static/resource/echarts/echarts3.7.2/echarts.min.js"></script>
-    <script src="../static/resource/echarts/common/china.js"></script>
     <link rel="stylesheet" href="../static/resource/amazeui/css/amazeui.min.css" />
     <link rel="stylesheet" href="../static/assets/css/amazeui.datatables.min.css" />
      <link rel="stylesheet" href="../static/assets/css/app.css">
-    <link rel="stylesheet" href="../static/resource/layui2.5.4/css/layui.css">
+     <link rel="stylesheet" href="../static/resource/layui2.5.4/css/layui.css">
     <script src="../static/assets/js/jquery.min.js"></script>
 
 </head>
 
-<body data-type="chart">
+<body data-type="regionLink">
     <script src="../static/assets/js/theme.js"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
-        <div class="headerpage "></div>
+        <!-- 顶部导航 -->
+        <div class="headerpage " ></div>
 
         <!-- 风格切换 -->
         <div class="tpl-skiner"></div>
@@ -35,18 +35,15 @@
          <!-- 侧边导航栏 -->
         <div class="left-sidebar"></div>
 
+
         <!-- 内容区域 -->
         <div class="tpl-content-wrapper">
 
             <div class="container-fluid am-cf">
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 图表 <small>Amaze UI</small></div>
-                        <p class="page-header-description">图表组件使用的是 <a href="http://echarts.baidu.com">百度图表echarts</a>。</p>
+                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 山西省 </div>
                     </div>
-                    <!--<div class="am-u-lg-3 tpl-index-settings-button">
-                        <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置</button>
-                    </div>-->
                 </div>
 
             </div>
@@ -54,58 +51,36 @@
             <div class="row-content am-cf">
                 <div class="widget am-cf">
                     <div class="widget-head am-cf">
-                        <div class="widget-title am-fl">折线</div>
+                        <div class="widget-title am-fl">中国地图</div>
                         <div class="widget-function am-fr">
                             <a href="javascript:;" class="am-icon-cog"></a>
                         </div>
                     </div>
                     <div class="widget-body am-fr">
-                        <div style="height: 400px" class="" id="tpl-echarts-A">
+                        <div style="height: 800px" class="" id="tpl-echarts-A">
 
                         </div>
                     </div>
                 </div>
 
 
-                <div class="widget am-cf">
-                    <div class="widget-head am-cf">
-                        <div class="widget-title am-fl">雷达</div>
-                        <div class="widget-function am-fr">
-                            <a href="javascript:;" class="am-icon-cog"></a>
-                        </div>
-                    </div>
-                    <div class="widget-body am-fr">
-                        <div style="height: 400px" id="tpl-echarts-B">
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="widget am-cf">
-                    <div class="widget-head am-cf">
-                        <div class="widget-title am-fl">折线柱图</div>
-                        <div class="widget-function am-fr">
-                            <a href="javascript:;" class="am-icon-cog"></a>
-                        </div>
-                    </div>
-                    <div class="widget-body am-fr">
-                        <div style="height: 400px" id="tpl-echarts-C">
-
-                        </div>
-                    </div>
-                </div>
 
             </div>
-        </div>app.js
+
+
+        </div>
     </div>
     </div>
+
+
     <script src="../static/common/js/frame.js"></script>
     <script src="../static/assets/js/amazeui.min.js"></script>
     <script src="../static/assets/js/amazeui.datatables.min.js"></script>
     <script src="../static/assets/js/dataTables.responsive.min.js"></script>
     <script src="../static/resource/layui2.5.4/layui.js"></script>
+    <script src="../static/js/regionLinkData.js"></script>
     <script src="../static/assets/js/app.js"></script>
+
 
 </body>
 

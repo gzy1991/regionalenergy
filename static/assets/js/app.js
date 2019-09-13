@@ -60,6 +60,20 @@ var pageData = {
 
         echartsA.setOption(option);
     },
+    'regionLink':function regionLinkData(){
+        /*制作中国地图*/
+        // var echartsA = echarts.init(document.getElementById('tpl-echarts-A'));
+        $.getJSON("/static/data/regionLink.json", function(json) {
+            // debugger;
+            initRegionLinkEchart(json[0],"tpl-echarts-A");
+            console.log(json); // this will show the info it in firebug console
+
+        });
+        /*var optionA = {
+
+        }
+        echartsA.setOption(optionA);*/
+    },
     // ===============================================
     // 图表页
     // ===============================================
@@ -275,7 +289,7 @@ var pageData = {
     }
 }
 
-
+/*导航栏缩进功能*/
 function autoLeftNav() {
     $('.tpl-header-switch-button').on('click', function () {
         if ($('.left-sidebar').is('.active')) {
