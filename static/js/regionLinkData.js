@@ -62,9 +62,9 @@ var geoData=[ 			// 选中的省份,初始化的时候是空.当点击省份时�
 /* 初始化echart  ,第一次打开页面时或者点击表格行事件时，调用本函数
 *  入参：表格的行数据  */
 var initRegionLinkEchart = function(row,id){
+	selectedSheet=row;
     var dom = document.getElementById(id);;
     var myChart = echarts.init(dom);;
-    debugger
 	if(myChart&&myChart.dispose){
 		myChart.dispose();
 	}

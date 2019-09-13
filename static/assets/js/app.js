@@ -69,10 +69,6 @@ var pageData = {
             console.log(json); // this will show the info it in firebug console
 
         });
-        /*var optionA = {
-
-        }
-        echartsA.setOption(optionA);*/
     },
     // ===============================================
     // 图表页
@@ -364,14 +360,15 @@ $(document).ready(function () {
     });
     <!-- 3 侧边导航栏 -->
     $(".left-sidebar").load("../static/common/html/sidebar.html", function () {
-        autoLeftNav();
-        /*侧边栏*/
-        // 侧边菜单
+        autoLeftNav(); /*导航栏缩进功能*/
+        // 侧边菜单 数据列表
         $('.sidebar-nav-sub-title').on('click', function () {
             $(this).siblings('.sidebar-nav-sub').slideToggle(80)
                 .end()
                 .find('.sidebar-nav-sub-ico').toggleClass('sidebar-nav-sub-ico-rotate');
         })
+
+
     });
 
     // 读取body data-type 判断是哪个页面然后执行相应页面方法，方法在下面。
@@ -386,6 +383,8 @@ $(document).ready(function () {
         autoLeftNav();
         console.log($(window).width())
     });
+
+
 
 
 });

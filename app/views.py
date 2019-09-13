@@ -1,11 +1,20 @@
-
+#coding:utf-8
+#!/usr/bin/python
 # Create your views here.
 from django.shortcuts import render
-
+import json
 # Create your views here.
 
+def getPage(request):
+
+
+    return render(request, 'app/index.html', {'province': "山西"})
+
 def index(request):
-    return  render(request, 'app/index.html')
+    context          = {}
+    context['hello'] = 'Hello World!'
+    mydict = {"hello": "Hello World", "usersn": "123456"}
+    return  render(request, 'app/index.html',{'province':"山西"} )
 
 def home(request):
     return  render(request, 'app/homePage.html')
