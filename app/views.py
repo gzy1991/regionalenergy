@@ -6,9 +6,37 @@ import json
 # Create your views here.
 
 def getPage(request):
+    province = request.GET.get("province")
+    if(province=="" or province=="undefined"):
+        province="河南省"
+    type = request.GET.get("type")
+    html=''
+    if(type=="index"):
+        html='index'
+    elif(type=="trend"):
+        html = 'trend'
+    elif (type == "regionLink"):
+        html = 'regionLink'
+    elif(type=="prediction"):
+        html = 'prediction'
+    elif(type=="calendarPage"):
+        html = 'calendar'
+    elif(type=="formPage"):
+        html = 'form'
+    elif(type=="chartPage"):
+        html = 'chart'
+    elif(type=="tableListPage"):
+        html = 'table-list'
+    elif(type=="tableListImgPage"):
+        html = 'table-list-img'
+    elif(type=="signUpPage"):
+        html = 'sign-up'
+    elif(type=="loginPage"):
+        html = 'login'
+    elif(type=="errorPage"):
+        html = '404'
 
-
-    return render(request, 'app/index.html', {'province': "山西"})
+    return render(request, 'app/'+html+'.html', {'province': province})
 
 def index(request):
     context          = {}
@@ -48,4 +76,5 @@ def loginPage(request):
 
 def errorPage(request):
     return  render(request, 'app/404.html')
+
 

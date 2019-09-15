@@ -24,21 +24,24 @@ from amazeui import views as amazeuiViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
-    path('home/', views.home),
-    path('regionLink/', views.regionLink),
+    # path('home/', views.home),
+    # path('regionLink/', views.regionLink),
 
-    path('tablesPage/', views.tablesPage),
-    path('calendarPage/', views.calendarPage),
-    path('formPage/', views.formPage),
-    path('chartPage/', views.chartPage),
-    path('tableListPage/', views.tableListPage),
-    path('tableListImgPage/', views.tableListImgPage),
-    path('signUpPage/', views.signUpPage),
-    path('loginPage/', views.loginPage),
-    path('errorPage/', views.errorPage),
+    # path('tablesPage/', views.tablesPage),
+    # path('calendarPage/', views.calendarPage),
+    # path('formPage/', views.formPage),
+    # path('chartPage/', views.chartPage),
+    # path('tableListPage/', views.tableListPage),
+    # path('tableListImgPage/', views.tableListImgPage),
+    # path('signUpPage/', views.signUpPage),
+    # path('loginPage/', views.loginPage),
+    # path('errorPage/', views.errorPage),
+
+
+    path('getPage/', views.getPage),
 
     #
-    path('amazeui/', amazeuiViews.index),
+    # path('amazeui/', amazeuiViews.index),
 ]
               # + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 

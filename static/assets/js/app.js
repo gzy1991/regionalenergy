@@ -327,27 +327,31 @@ var provinceSelectBind = function () {
             elem: '#area-picker',
             change: function (res) {
                 //选择结果
-                console.log(res);
-                res.province
-                $("div.page-header-heading").html('<span class="am-icon-home page-header-heading-icon"></span> ' +
-                    res.province
-                )
+                $("#province").val(res.province);
+                $("#provinceShow").html(res.province);
             }
         });
     });
 }
 
+/*导航栏 点击事件*/
 var js_method = function(th){
-    var url = th.getAttribute("data-url")
-    var province =""
-    console.log("js_method:"+url)
-
+    var type = th.getAttribute("data-url")
+    var province =$("#province").val();
+    if(province==""||province==undefined){
+        province=""
+    }
+    window.location.href="/getPage?province="+province+"&type="+type;
 }
 
 $(document).ready(function () {
     /*加载 3个 公共页面*/
     <!-- 1 顶部导航 -->
     $(".headerpage").load("../static/common/html/header.html", function () {
+        if($("#province").val()!=""){
+            $("#provinceShow").html($("#province").val());
+        }
+
     });
     <!-- 2 风格切换 -->
     $(".tpl-skiner").load("../static/common/html/skiner.html", function () {
