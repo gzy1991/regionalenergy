@@ -10,7 +10,7 @@ header {
 }
 .tpl-header-logo {
   width: 240px;
-  height: 57px;
+  height: 56px;
   display: table;
   text-align: center;
   position: relative;
@@ -398,7 +398,7 @@ ul.tpl-dropdown-content .tpl-dropdown-menu-messages-item .menu-messages-content 
 .container-fluid {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 40px 0;
+  padding: 10px 0;
   border-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
