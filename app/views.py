@@ -14,7 +14,7 @@ def index(request):
     context          = {}
     context['hello'] = 'Hello World!'
     mydict = {"hello": "Hello World", "usersn": "123456"}
-    return  render(request, 'app/index.html',{'province':"山西"} )
+    return  render(request, 'app/index.html',{'province':"山西省"} )
 
 def home(request):
     return  render(request, 'app/homePage.html')

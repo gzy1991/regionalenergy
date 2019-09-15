@@ -337,6 +337,12 @@ var provinceSelectBind = function () {
     });
 }
 
+var js_method = function(th){
+    var url = th.getAttribute("data-url")
+    var province =""
+    console.log("js_method:"+url)
+
+}
 
 $(document).ready(function () {
     /*加载 3个 公共页面*/
@@ -361,6 +367,9 @@ $(document).ready(function () {
     });
     <!-- 3 侧边导航栏 -->
     $(".left-sidebar").load("../static/common/html/sidebar.html", function () {
+        $(".sidebar-nav-link a.active").removeClass("active") ;/* 取消导航栏按钮的选中效果 */
+        $(".sidebar-nav-link a").removeClass("active") ;/* 取消导航栏按钮的选中效果 */
+
         autoLeftNav(); /*导航栏缩进功能*/
         // 侧边菜单 数据列表
         $('.sidebar-nav-sub-title').on('click', function () {
@@ -372,9 +381,8 @@ $(document).ready(function () {
 
     });
 
-    // 读取body data-type 判断是哪个页面然后执行相应页面方法，方法在下面。
+    //读取body data-type 判断是哪个页面然后执行相应页面方法，方法在下面。
     var dataType = $('body').attr('data-type');
-    $("a.active").removeClass("active")
     console.log(dataType);
     for (key in pageData) {
         if (key == dataType) {
