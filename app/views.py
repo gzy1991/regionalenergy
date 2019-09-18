@@ -3,15 +3,21 @@
 # Create your views here.
 from django.shortcuts import render
 import json
+import regionalenergy.settings as Setting
 # Create your views here.
 
 def getPage(request):
     province = request.GET.get("province")
     if(province=="" or province=="undefined"):
         province="河南省"
+    resData={}
+    resData["province"]=province
     type = request.GET.get("type")
     html=''
     if(type=="index"):
+        # 获取页面数据
+        Setting.FILR_DIR["INDEX_DIR"]
+
         html='index'
     elif(type=="trend"):
         html = 'trend'
@@ -36,7 +42,7 @@ def getPage(request):
     elif(type=="errorPage"):
         html = '404'
 
-    return render(request, 'app/'+html+'.html', {'province': province})
+    return render(request, 'app/'+html+'.html', resData)
 
 def index(request):
     context          = {}

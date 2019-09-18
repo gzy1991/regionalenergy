@@ -127,3 +127,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+FILR_BASE_DIR=os.path.join(BASE_DIR,"file")  #文件路径
+FILR_DIR={                                    #各个图自己的路径
+    "INDEX_DIR":os.path.join(FILR_BASE_DIR,"index"),  #
+}
+
+DEFAULT_CHARSET = 'utf-8'
