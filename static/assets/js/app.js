@@ -1,11 +1,10 @@
-
 // 页面数据  每个页面对应的处理函数
 var pageData = {
     // ===============================================
     // 首页
     // ===============================================
     'index': function indexData() {
-       /* $(".sidebar-nav").removeClass("active")*/
+        /* $(".sidebar-nav").removeClass("active")*/
         $('#example-r').DataTable({
 
             bInfo: false, //页脚信息
@@ -61,12 +60,12 @@ var pageData = {
 
         echartsA.setOption(option);
     },
-    'regionLink':function regionLinkData(){
+    'regionLink': function regionLinkData() {
         /*制作中国地图*/
         // var echartsA = echarts.init(document.getElementById('tpl-echarts-A'));
-        $.getJSON("/static/data/regionLink.json", function(json) {
+        $.getJSON("/static/data/regionLink.json", function (json) {
             // debugger;
-            initRegionLinkEchart(json[0],"tpl-echarts-A");
+            initRegionLinkEchart(json[0], "tpl-echarts-A");
             console.log(json); // this will show the info it in firebug console
 
         });
@@ -335,20 +334,20 @@ var provinceSelectBind = function () {
 }
 
 /*导航栏 点击事件*/
-var js_method = function(th){
+var js_method = function (th) {
     var type = th.getAttribute("data-url")
-    var province =$("#province").val();
-    if(province==""||province==undefined){
-        province=""
+    var province = $("#province").val();
+    if (province == "" || province == undefined) {
+        province = ""
     }
-    window.location.href="/getPage?province="+province+"&type="+type;
+    window.location.href = "/getPage?province=" + province + "&type=" + type;
 }
 
 $(document).ready(function () {
     /*加载 3个 公共页面*/
     <!-- 1 顶部导航 -->
     $(".headerpage").load("../static/common/html/header.html", function () {
-        if($("#province").val()!=""){
+        if ($("#province").val() != "") {
             $("#provinceShow").html($("#province").val());
         }
 
@@ -359,20 +358,28 @@ $(document).ready(function () {
         $('.tpl-skiner-toggle').on('click', function () {
             $('.tpl-skiner').toggleClass('active');
         })
-        /*$('.tpl-skiner-content-bar').find('span').on('click', function () {
-            $('body').attr('class', $(this).attr('data-color'))
-            saveSelectColor.Color = $(this).attr('data-color');
-            // 保存选择项
-            storageSave(saveSelectColor);
-
-        })*/
         /* 省份选择功能*/
         provinceSelectBind();
+        /* 年份选择功能 */
+        layui.use('laydate', function () {
+            var laydate = layui.laydate;
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#date-picker', //指定元素
+                type: 'year',
+                // range :false,
+                value: "2018",
+                position :"fixed",
+                theme: '#393D49'
+            });
+
+
+        });
     });
     <!-- 3 侧边导航栏 -->
     $(".left-sidebar").load("../static/common/html/sidebar.html", function () {
-        $(".sidebar-nav-link a.active").removeClass("active") ;/* 取消导航栏按钮的选中效果 */
-        $(".sidebar-nav-link a").removeClass("active") ;/* 取消导航栏按钮的选中效果 */
+        $(".sidebar-nav-link a.active").removeClass("active");/* 取消导航栏按钮的选中效果 */
+        $(".sidebar-nav-link a").removeClass("active");/* 取消导航栏按钮的选中效果 */
 
         autoLeftNav(); /*导航栏缩进功能*/
         // 侧边菜单 数据列表
