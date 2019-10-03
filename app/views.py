@@ -50,37 +50,43 @@ def index(request):
     mydict = {"hello": "Hello World", "usersn": "123456"}
     return  render(request, 'app/index.html',{'province':"山西省"} )
 
-def home(request):
-    return  render(request, 'app/homePage.html')
+def getIndexDate(request):
+    Setting.FILR_DIR["INDEX_DIR"]  #文件路径
 
-def regionLink(request):
-    return  render(request, 'app/regionLink.html')
 
-def tablesPage(request):
-    return  render(request, 'app/tables.html')
+    return render(request)
 
-def calendarPage(request):
-    return  render(request, 'app/calendar.html')
-
-def formPage(request):
-    return  render(request, 'app/form.html')
-
-def chartPage(request):
-    return  render(request, 'app/chart.html')
-
-def tableListPage(request):
-    return  render(request, 'app/table-list.html')
-
-def tableListImgPage(request):
-    return  render(request, 'app/table-list-img.html')
-
-def signUpPage(request):
-    return  render(request, 'app/sign-up.html')
-
-def loginPage(request):
-    return  render(request, 'app/login.html')
-
-def errorPage(request):
-    return  render(request, 'app/404.html')
+# def home(request):
+#     return  render(request, 'app/homePage.html')
+#
+# def regionLink(request):
+#     return  render(request, 'app/regionLink.html')
+#
+# def tablesPage(request):
+#     return  render(request, 'app/tables.html')
+#
+# def calendarPage(request):
+#     return  render(request, 'app/calendar.html')
+#
+# def formPage(request):
+#     return  render(request, 'app/form.html')
+#
+# def chartPage(request):
+#     return  render(request, 'app/chart.html')
+#
+# def tableListPage(request):
+#     return  render(request, 'app/table-list.html')
+#
+# def tableListImgPage(request):
+#     return  render(request, 'app/table-list-img.html')
+#
+# def signUpPage(request):
+#     return  render(request, 'app/sign-up.html')
+#
+# def loginPage(request):
+#     return  render(request, 'app/login.html')
+#
+# def errorPage(request):
+#     return  render(request, 'app/404.html')
 
 
