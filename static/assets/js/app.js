@@ -4,6 +4,22 @@ var pageData = {
     // 首页
     // ===============================================
     'index': function indexData() {
+        /*从后端获取到数据*/
+        $.ajax({
+            url:'/getDateInIdex',
+            type:"GET",
+            async:false,
+            success:function(data){
+                console.log(data)
+                console.log(" getDateInIdex 扫描成功");
+
+            }
+
+        })
+
+
+
+
         /* $(".sidebar-nav").removeClass("active")*/
         $('#example-r').DataTable({
 

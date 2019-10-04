@@ -24,6 +24,7 @@ from amazeui import views as amazeuiViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
+    path('getDateInIdex/', views.getIndexDate),
     # path('home/', views.home),
     # path('regionLink/', views.regionLink),
 
