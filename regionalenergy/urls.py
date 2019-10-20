@@ -24,7 +24,7 @@ from amazeui import views as amazeuiViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
-    path('getDateInIdex/', views.getIndexDate),
+    path('getDateInIdex/', views.getIndexDate), #获取首页的数据
     # path('home/', views.home),
     # path('regionLink/', views.regionLink),
 

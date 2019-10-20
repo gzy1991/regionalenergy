@@ -72,7 +72,8 @@ def getIndexDate(request):
             fileName = fullFileName.split(".")[0]
             if(fileName == "1"): #处理1.xlsx
                 print("1.xlsx")
-
+                yearNum= 0 # 有几年
+                yearList=[]  #年份
                 excelData = xlrd.open_workbook(file, "rb")  # excel的全部数据
                 sheetNameList = excelData.sheet_names()  # 获取此文件的全部sheet名
                 # if ('year' not in sheetNameList):
@@ -82,6 +83,11 @@ def getIndexDate(request):
 
                 # 读取 year， 获得年份
                 sheetData = ExcelTool.getNpArrayFromSheet(excelData, "year", "name", 0, 6)  # 只有6列
+                yearNum = sheetData.shape[0]  #有几年
+                for i in range(yearNum) :
+                    yearList.append(str(sheetData[i][0]).split(".")[0])
+
+                #处理 “POP” 人口
 
 
             elif(fileName=="2"):
