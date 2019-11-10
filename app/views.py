@@ -87,7 +87,12 @@ def getIndexDate(request):
                 for i in range(yearNum) :
                     yearList.append(str(sheetData[i][0]).split(".")[0])
 
+                yearNum= len(yearList)
                 #处理 “POP” 人口
+                sheetData = ExcelTool.getNpArrayFromSheet(excelData, "POP", "name", 31, 0)  #
+                #处理GDP
+
+                # 处理Energy
 
 
             elif(fileName=="2"):
