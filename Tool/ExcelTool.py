@@ -99,3 +99,12 @@ def setZero (sheetData,row,column):
                 sheetData[r][c] = 0
 
 
+# 从nArray数据转换成list数据  ， 二维数组
+def  nArrayToList(sheetData,ii,jj):
+    list=[]
+    for i in range(ii) :
+        row=[]
+        for j in range(jj):
+            row.append(sheetData[i][j])
+        list.append(row)
+    return list

@@ -1,6 +1,6 @@
 #coding:utf-8
 #!/usr/bin/python
-# Create your views here.
+
 from django.shortcuts import render
 import json
 import regionalenergy.settings as Setting
@@ -10,6 +10,7 @@ import xlrd
 import xlwt
 import numpy as np
 import Tool.ExcelTool as ExcelTool
+import Tool.ProvinceTool as ProvinceTool
 from django.http import HttpResponse,JsonResponse
 
 def getPage(request):
@@ -65,6 +66,9 @@ def getIndexDate(request):
     # 获取省份名列表，包括 ： 中文名、英文名、纬度、经度
     provincesInfo = ExcelTool.getArrayBySheetName(os.path.join(Setting.FILR_DIR["COMMON_DIR"],
                                                                "Province.xlsx"), "province")
+    #provincesInfoList = transform(provincesInfo,31,6)
+    resultList["province"] = ProvinceTool.getProvinceInfo()
+
     for file in files:  # 遍历每个excel文件
         try:
             result = {}  # 单个excel文件处理后的结果
@@ -86,15 +90,22 @@ def getIndexDate(request):
                 yearNum = sheetData.shape[0]  #有几年
                 for i in range(yearNum) :
                     yearList.append(str(sheetData[i][0]).split(".")[0])
-
-                yearNum= len(yearList)
-                #处理 “POP” 人口
-                sheetData = ExcelTool.getNpArrayFromSheet(excelData, "POP", "name", 31, 0)  #
-                #处理GDP
-
+                resultList["year"]=yearList
+                yearNum= len(yearList)  #年数
+                # 处理 “POP” 人口
+                sheetDataPOP = ExcelTool.getNpArrayFromSheet(excelData, "POP", "name", 31, 0)  #
+                sheetDataPOPList = ExcelTool.nArrayToList(sheetDataPOP,31,yearNum)
+                resultList["pop"]=sheetDataPOPList
+                # 处理GDP
+                sheetDataGDP = ExcelTool.getNpArrayFromSheet(excelData, "GDP", "name", 31, 0)  #
+                sheetDataGDPList = ExcelTool.nArrayToList(sheetDataGDP,31,yearNum)
+                resultList["gdp"] = sheetDataGDPList
                 # 处理Energy
+                sheetDataenergy = ExcelTool.getNpArrayFromSheet(excelData, "energy", "name", 31, 0)  #
+                sheetDataenergyList = ExcelTool.nArrayToList(sheetDataenergy,31,yearNum)
+                resultList["energy"] = sheetDataenergyList
 
-
+                print("end 1.xlsx")
             elif(fileName=="2"):
                 print("2.xlsx")
         except BaseException:
@@ -103,5 +114,4 @@ def getIndexDate(request):
             traceback.print_exc()
     resultListJson=json.dumps(resultList)
     return HttpResponse(resultListJson)
-
 
