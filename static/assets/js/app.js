@@ -1,5 +1,10 @@
+/* 公共数据*/
+
+var  pageData;
+
+
 // 页面数据  每个页面对应的处理函数
-var pageData = {
+var pageFunc = {
     // ===============================================
     // 首页
     // ===============================================
@@ -10,6 +15,7 @@ var pageData = {
             type:"GET",
             async:false,
             success:function(data){
+                pageData=data;
                 console.log(data)
                 console.log(" getDateInIdex 扫描成功");
 
@@ -411,9 +417,9 @@ $(document).ready(function () {
     //读取body data-type 判断是哪个页面然后执行相应页面方法，方法在下面。
     var dataType = $('body').attr('data-type');
     console.log(dataType);
-    for (key in pageData) {
+    for (key in pageFunc) {
         if (key == dataType) {
-            pageData[key]();
+            pageFunc[key]();
         }
     }
     $(window).resize(function () {

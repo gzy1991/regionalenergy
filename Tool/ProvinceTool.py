@@ -8,7 +8,7 @@ import os.path
 
 # 获取省份名列表，包括 ： 中文名、英文名、纬度、经度
 # 获取31个省份名列字典，key是中文名,
-def getProvinceInfo():
+def getProvinceInfoChina():
     provincesInfo = ExcelTool.getArrayBySheetName(os.path.join(Setting.FILR_DIR["COMMON_DIR"],"Province.xlsx"), "province")
     provincesInfoList = ExcelTool.nArrayToList(provincesInfo,31,6)
     result={}
@@ -18,7 +18,7 @@ def getProvinceInfo():
     return result
 
 # 获取31个省份名列字典，key是英文名,
-def getProvinceInfo():
+def getProvinceInfoEng():
     provincesInfo = ExcelTool.getArrayBySheetName(os.path.join(Setting.FILR_DIR["COMMON_DIR"], "Province.xlsx"),"province")
     provincesInfoList = ExcelTool.nArrayToList(provincesInfo, 31, 6)
     result = {}

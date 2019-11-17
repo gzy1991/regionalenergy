@@ -67,7 +67,7 @@ def getIndexDate(request):
     provincesInfo = ExcelTool.getArrayBySheetName(os.path.join(Setting.FILR_DIR["COMMON_DIR"],
                                                                "Province.xlsx"), "province")
     #provincesInfoList = transform(provincesInfo,31,6)
-    resultList["province"] = ProvinceTool.getProvinceInfo()
+    resultList["province"] = ProvinceTool.getProvinceInfoChina()
 
     for file in files:  # 遍历每个excel文件
         try:
